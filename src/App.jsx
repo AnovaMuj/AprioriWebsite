@@ -37,8 +37,8 @@ function App() {
       </BrowserRouter>
       <Footer />
       <Helmet>
-        <script src="src/ElementReveal.js" type="module" />
-        <script src="src/Preloader.js" type="module" />
+        <script src="https://cdn.jsdelivr.net/gh/AnovaMuj/AprioriWebsite/src/ElementReveal.js" type="module" />
+        <script src="https://cdn.jsdelivr.net/gh/AnovaMuj/AprioriWebsite/src/Preloader.js" type="module" />
       </Helmet>
     </>
   );

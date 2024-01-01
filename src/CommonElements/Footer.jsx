@@ -109,7 +109,7 @@ function Footer() {
         </div>
       </div>
       <Helmet>
-        <script src="src/CommonElements/FooterScrollScript.js" type="module" />
+        <script src="https://cdn.jsdelivr.net/gh/AnovaMuj/AprioriWebsite/src/CommonElements/FooterScrollScript.js" type="module" />
       </Helmet>
     </>
   );

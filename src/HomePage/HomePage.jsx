@@ -158,7 +158,7 @@ const HomePage = () => {
       </div>
       {/* <div className="sponsor-container"></div> */}
       <Helmet>
-        <script src="src/HomePage/HorizontalScrollScript.js" type="module" />
+        <script src="https://cdn.jsdelivr.net/gh/AnovaMuj/AprioriWebsite/src/HomePage/HorizontalScrollScript.js" type="module" />
       </Helmet>
     </main>
   );
