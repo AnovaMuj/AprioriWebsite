@@ -1,0 +1,176 @@
+.navbar {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  z-index: 1;
+  background: linear-gradient(0deg, transparent, #000);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 4em;
+}
+
+.navbar-logo-div {
+  display: flex;
+  gap: 5px;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-name-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-name {
+  font-family: "UnZialish" !important;
+}
+
+.navbar-dates {
+  font-size: 0.75em;
+}
+
+.navbar-logo-anchor-tag {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-anchor-tags {
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+  font-size: 1.5em;
+  z-index: 2;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar-anchor-tags:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  bottom: -45px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%23e0ff00; stroke-width:2; stroke-linecap:square; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+}
+
+.navbar-anchor-tags:hover {
+  color: #c2ff00;
+}
+
+.navbar-anchor-tags:hover:before {
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23e0ff00; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+  animation: navbar-waving 3s linear infinite;
+  transform: scaleX(1);
+}
+
+@keyframes navbar-waving {
+  to {
+    background-position: 80px 50%, 160px 50%;
+  }
+}
+
+input[type = "checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.navbar-bar {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+}
+
+.navbar-bar span {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.navbar-bar span.navbar-hamburger-top {
+  top: 0;
+}
+
+.navbar-bar span.navbar-hamburger-middle {
+  top: 10px;
+}
+
+.navbar-bar span.navbar-hamburger-bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.navbar-hamburger-top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 30px;
+  left: 5px;
+}
+
+input[type]:checked ~ span.navbar-hamburger-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 30px;
+  bottom: -1px;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.navbar-hamburger-middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .navbar-bar {
+    display: block;
+  }
+
+  .navbar-ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 80vh;
+    height: 200vh;
+    width: 100vw;
+    background-color: rgba(69, 69, 69, 0.5);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+}

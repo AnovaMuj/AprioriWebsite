@@ -1,0 +1,234 @@
+.footer {
+  position: relative;
+  min-height: 40vh;
+  background-color: #ae9672;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-cover-left-img {
+  position: absolute;
+  height: 100%;
+  transform: translateX(-100vw);
+  transition: transform 3s;
+  z-index: -1;
+}
+
+.footer-cover-right-img {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  transform: translateX(100vw);
+  transition: transform 3s;
+  z-index: -1;
+}
+
+.footer-cover-center-left-img {
+  position: absolute;
+  height: 100%;
+  transform: translateX(49.6vw);
+  transition: transform 3s;
+  z-index: -1;
+}
+
+.footer-cover-center-right-img {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  transform: translateX(-49.6vw);
+  transition: transform 3s;
+  z-index: -1;
+}
+
+.move-footer-center-left {
+  transform: translateX(100vw);
+}
+
+.move-footer-center-right {
+  transform: translateX(-100vw);
+}
+
+.move-footer-left {
+  transform: rotate(180deg) translateX(0);
+}
+
+.move-footer-right {
+  transform: rotate(-180deg) translateX(0);
+}
+
+.footer-main-text {
+  font-size: 2em;
+  text-align: center;
+  padding-top: 1.5vh;
+  color: #050505;
+}
+
+.footer-apriori {
+  font-family: "UnZialish";
+  font-size: 2.25em;
+  margin-right: 0.3em;
+}
+
+.footer-anova {
+  font-family: "Posterama 2001 W04 SemiBold";
+  font-size: 2em;
+  margin-left: 0.3em;
+}
+
+.footer-follow-us {
+  display: flex;
+  font-size: 1.75em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vh;
+  color: #050505;
+}
+
+.footer-instagram, .footer-linkedin {
+  cursor: pointer;
+  color: #050505;
+  transition: color 0.3s;
+  width: 30px;
+  display: flex;
+}
+
+.footer-instagram:hover {
+  color: #E1306C;
+}
+
+.footer-linkedin:hover {
+  color: #0a66c2;
+}
+
+.footer-contact-us {
+  font-size: 1.75em;
+  text-align: center;
+  color: #050505;
+  margin-top: 1vh;
+}
+
+.footer-copyright {
+  font-size: 1.75em;
+  text-align: center;
+  color: #050505;
+}
+
+.footer-developed-by {
+  font-size: 1.75em;
+  text-align: center;
+  color: #050505;
+}
+
+.footer-heart {
+  cursor: pointer;
+}
+
+.developed-by-backdrop-enabled {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(5, 5, 5, 0.5);
+  top: 0;
+}
+
+.developed-by-card {
+  position: absolute;
+  height: 90%;
+  width: 40vw;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  backdrop-filter: blur(5px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(200%);
+  background-color: rgba(155, 155, 155, 0.30);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  display: none;
+  padding: 1%;
+}
+
+.developed-by-card-enabled {
+  display: block;
+}
+
+.footer-heart:hover {
+  filter: hue-rotate(45deg);
+}
+
+.developed-by-img {
+  height: 10vh;
+}
+
+.developed-by-name {
+  font-size: 0.8em;
+}
+
+.developed-by-about {
+  font-size: 0.6em;
+}
+
+.developed-by-socials {
+  height: 4vh;
+  display: flex;
+  margin-top: 2vh;
+}
+
+.developed-by-github-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-anchor-tag-instagram:hover {
+  color: #E1306C;
+}
+
+.link-anchor-tag-linkedin:hover {
+  color: #0a66c2;
+}
+
+.link-anchor-tag-github:hover {
+  color: #ececec;
+}
+
+.link-anchor-tag {
+  text-decoration: none;
+  color: #050505;
+}
+
+.developed-by-hint {
+  font-size: 0.65em;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+}
+
+.link-anchor-tag-hint {
+  text-decoration: none;
+  color: rgba(5, 5, 5, 0.3);
+}
+
+@media screen and (max-width: 900px) {
+  .footer-main-text, .footer-follow-us, .footer-instagram, .footer-linkedin, .footer-contact-us, .footer-copyright, .footer-developed-by {
+    color: #fff;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-main-text, .footer-follow-us, .footer-instagram, .footer-linkedin, .footer-contact-us, .footer-copyright, .footer-developed-by {
+    color: #fff;
+    font-size: 1.1em;
+  }
+
+  .footer-main-text {
+    padding-top: 3vh;
+  }
+
+  .footer-follow-us {
+    margin-top: 12vh;
+  }
+}

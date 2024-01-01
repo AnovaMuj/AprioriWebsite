@@ -1,0 +1,149 @@
+.major-events-view-more-body {
+  height: 100vh;
+  width: 100vw;
+  background-color: purple;
+  box-shadow: 0 0 400px 100px rgba(0, 0, 0, 0.7) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  gap: 8vw;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.view-more-cards-div {
+  position: relative;
+  height: 30vh;
+  width: 30vw;
+}
+
+.view-more-card {
+  background: white;
+  background-size: cover;
+  height: 220px;
+  width: 150px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 50%;
+  transform-origin: center 120%;
+  transition: transform 1s ease-out;
+}
+
+.view-more-cards {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.view-more-cards div:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-16.6666666667deg);
+}
+.view-more-cards div:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-8.3333333333deg);
+}
+.view-more-cards div:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.view-more-cards div:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(8.3333333333deg);
+}
+.view-more-cards div:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(16.6666666667deg);
+}
+.view-more-cards:hover div:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+.view-more-cards:hover div:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+.view-more-cards:hover div:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.view-more-cards:hover div:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+.view-more-cards:hover div:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(20deg);
+}
+
+.view-more-content-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-more-content {
+  text-align: center;
+}
+
+.view-more-btn-div {
+  padding-top: 1em;
+}
+
+.cssbuttons-io-button {
+  background: #a370f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+@media screen and (max-width: 768px) {
+  .major-events-view-more-body {
+    box-shadow: 0 0 400px 50px rgba(0, 0, 0, 0.6) inset;
+    font-size: 1.2em;
+    flex-direction: column;
+    gap: 10em;
+  }
+}
