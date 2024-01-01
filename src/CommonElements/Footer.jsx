@@ -58,7 +58,7 @@ function Footer() {
           <div className="footer-contacts-label hidden-element">Contact us | info@apriori.anovamuj.com</div>
         </div>
         <div className="footer-copyright hidden-element">Copyright&copy; 2023</div>
-        <div className="footer-developed-by hidden-element">
+        <div className="footer-developed-by">
           <div>
             Developed with{" "}
             <span className="footer-heart" onClick={handleDevelopedByEnable}>
